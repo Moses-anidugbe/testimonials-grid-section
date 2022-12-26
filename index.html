@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Barlow Semi Condensed;
+        background: hsl(210, 46%, 95%);
+      }
+
+      main {
+        display: flex;
+        gap: 20px;
+      }
+
+      .testimonial-section1 {
+        display: flex;
+        gap: 20px;
+      }
+
+      .testimonial1 {
+        width: 510px;
+        height: 260px;
+        background: hsl(263, 55%, 52%) url("images/bg-pattern-quotation.svg")
+          no-repeat;
+        background-position-x: 315px;
+        border-radius: 8px;
+      }
+
+      .owner1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 20px;
+      }
+
+      .owner1 img {
+        width: 25px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+      }
+
+      .owner1 div p {
+        font-size: 13px;
+        color: hsl(0, 0%, 81%);
+      }
+
+      .owner1 div h6 {
+        opacity: 50%;
+        color: hsl(0, 0%, 81%);
+      }
+
+      .testimonial1 h3 {
+        width: 450px;
+        margin: 20px 0 20px 20px;
+        color: hsl(0, 0%, 100%);
+      }
+
+      .review-paragraph1 {
+        margin: 0 0 0 20px;
+        width: 470px;
+        font-size: 13px;
+        color: hsl(0, 0%, 81%);
+        opacity: 70%;
+      }
+
+      .testimonial2 {
+        width: 240px;
+        height: 260px;
+        background: hsl(217, 19%, 35%);
+        border-radius: 8px;
+      }
+
+      .owner2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 20px;
+      }
+
+      .owner2 img {
+        border-radius: 50%;
+        width: 25px;
+      }
+
+      .owner2 div p {
+        font-size: 13px;
+        color: hsl(0, 0%, 81%);
+      }
+
+      .owner2 div h6 {
+        color: hsl(0, 0%, 81%);
+        opacity: 50%;
+      }
+
+      .testimonial2 h3 {
+        color: hsl(0, 0%, 100%);
+        margin: 20px 0 20px 20px;
+        width: 200px;
+      }
+
+      .review-paragraph2 {
+        width: 190px;
+        font-size: 13px;
+        opacity: 70%;
+        color: hsl(0, 0%, 81%);
+        margin: 0 0 0 20px;
+      }
+
+      .testimonial-section2 {
+        margin: 20px 0 0 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      .testimonial3 {
+        width: 240px;
+        height: 250px;
+        border-radius: 8px;
+        background: hsl(0, 0%, 100%);
+      }
+
+      .owner3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 20px;
+      }
+
+      .owner3 img {
+        border-radius: 50%;
+        width: 25px;
+        height: 26px;
+      }
+
+      .owner3 div p {
+        font-size: 13px;
+        color: hsl(217, 19%, 35%);
+      }
+
+      .owner3 div h6 {
+        color: hsl(217, 19%, 35%);
+        opacity: 50%;
+      }
+
+      .testimonial3 h3 {
+        color: hsl(217, 19%, 35%);
+        width: 180px;
+        margin: 20px 0 20px 20px;
+      }
+
+      .review-paragraph3 {
+        font-size: 13px;
+        opacity: 70%;
+        color: hsl(217, 19%, 35%);
+        margin: 0 0 0 20px;
+        width: 200px;
+      }
+
+      .testimonial4 {
+        width: 510px;
+        height: 250px;
+        background: hsl(219, 29%, 14%);
+        border-radius: 8px;
+      }
+
+      .owner4 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 20px;
+      }
+
+      .owner4 img {
+        width: 25px;
+        height: 26px;
+        border: 1px solid hsl(263, 55%, 52%);
+        border-radius: 50%;
+      }
+
+      .owner4 div p {
+        font-size: 13px;
+        color: hsl(0, 0%, 81%);
+      }
+
+      .owner4 div h6 {
+        color: hsl(0, 0%, 81%);
+        opacity: 50%;
+      }
+
+      .testimonial4 h3 {
+        color: hsl(0, 0%, 100%);
+        margin: 20px 0 20px 20px;
+        width: 450px;
+      }
+
+      .review-paragraph4 {
+        color: hsl(0, 0%, 81%);
+        margin: 0 0 0 20px;
+        opacity: 70%;
+        font-size: 13px;
+        width: 470px;
+      }
+
+      .testimonial5 {
+        width: 240px;
+        height: 530px;
+        background: white;
+        border-radius: 8px;
+      }
+
+      .owner5 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0 0 20px;
+      }
+
+      .owner5 img {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+      }
+
+      .owner5 div p {
+        color: hsl(217, 19%, 35%);
+        font-size: 13px;
+      }
+
+      .owner5 div h6 {
+        opacity: 50%;
+        color: hsl(217, 19%, 35%);
+      }
+
+      .testimonial5 h3 {
+        color: hsl(217, 19%, 35%);
+        margin: 20px 0 20px 20px;
+      }
+
+      .review-paragraph5 {
+        font-size: 13px;
+        color: hsl(217, 19%, 35%);
+        opacity: 70%;
+        margin: 0 0 0 20px;
+        width: 200px;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          flex-direction: column;
+        }
+
+        .testimonial-section1 {
+          flex-direction: column;
+        }
+
+        .testimonial-section2 {
+          flex-direction: column;
+        }
+
+        .testimonial1 {
+          width: 300px;
+          height: 410px;
+        }
+
+        .testimonial1 h3 {
+          width: 245px;
+        }
+
+        .review-paragraph1 {
+          width: 248px;
+        }
+
+        .testimonial2 {
+          width: 300px;
+          height: 230px;
+        }
+
+        .testimonial2 h3 {
+          width: 240px;
+        }
+
+        .review-paragraph2 {
+          width: 270px;
+        }
+
+        .testimonial3 {
+          width: 300px;
+          height: 230px;
+        }
+
+        .testimonial3 h3 {
+          width: 200px;
+        }
+
+        .review-paragraph3 {
+          width: 260px;
+        }
+
+        .testimonial4 {
+          width: 300px;
+          height: 360px;
+        }
+
+        .testimonial4 h3 {
+          width: 245px;
+        }
+
+        .review-paragraph4 {
+          width: 262px;
+        }
+
+        .testimonial5 {
+          width: 300px;
+          height: 450px;
+        }
+
+        .review-paragraph5 {
+          width: 260px;
+        }
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="testimonial-section1">
+          <div class="testimonial1">
+            <div class="owner1">
+              <img src="images/image-daniel.jpg" alt="profile-picture" />
+              <div>
+                <p>Daniel Clifford</p>
+                <h6>Verified Graduate</h6>
+              </div>
+            </div>
+            <h3>
+              I received a job offer mid-course, and the subjects I learned were
+              current, if not more so, in the company I joined. I honestly feel
+              I got every penny’s worth.
+            </h3>
+            <p class="review-paragraph1">
+              “ I was an EMT for many years before I joined the bootcamp. I’ve
+              been looking to make a transition and have heard some people who
+              had an amazing experience here. I signed up for the free intro
+              course and found it incredibly fun! I enrolled shortly thereafter.
+              The next 12 weeks was the best - and most grueling - time of my
+              life. Since completing the course, I’ve successfully switched
+              careers, working as a Software Engineer at a VR startup. ”
+            </p>
+          </div>
+          <div class="testimonial2">
+            <div class="owner2">
+              <img src="images/image-jonathan.jpg" alt="profile-picture" />
+              <div>
+                <p>Jonathan Walters</p>
+                <h6>Verified Graduate</h6>
+              </div>
+            </div>
+            <h3>The team was very supportive and kept me motivated</h3>
+            <p class="review-paragraph2">
+              “ I started as a total newbie with virtually no coding skills. I
+              now work as a mobile engineer for a big company. This was one of
+              the best investments I’ve made in myself. ”
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-section2">
+          <div class="testimonial3">
+            <div class="owner3">
+              <img src="images/image-jeanette.jpg" alt="profile-picture" />
+              <div>
+                <p>Jeanette Harmon</p>
+                <h6>Verified Graduate</h6>
+              </div>
+            </div>
+            <h3>An overall wonderful and rewarding experience</h3>
+            <p class="review-paragraph3">
+              “ Thank you for the wonderful experience! I now have a job I
+              really enjoy, and make a good living while doing something I love.
+              ”
+            </p>
+          </div>
+          <div class="testimonial4">
+            <div class="owner4">
+              <img src="images/image-patrick.jpg" alt="profile-picture" />
+              <div>
+                <p>Patrick Abrams</p>
+                <h6>Verified Graduate</h6>
+              </div>
+            </div>
+            <h3>
+              Awesome teaching support from TAs who did the bootcamp themselves.
+              Getting guidance from them and learning from their experiences was
+              easy.
+            </h3>
+            <p class="review-paragraph4">
+              “ The staff seem genuinely concerned about my progress which I
+              find really refreshing. The program gave me the confidence
+              necessary to be able to go out in the world and present myself as
+              a capable junior developer. The standard is above the rest. You
+              will get the personal attention you need from an incredible
+              community of smart and amazing people. ”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial5">
+        <div class="owner5">
+          <img src="images/image-kira.jpg" alt="profile-picture" />
+          <div>
+            <p>Kira Whittle</p>
+            <h6>Verified Graduate</h6>
+          </div>
+        </div>
+        <h3>Such a life-changing experience. Highly recommended!</h3>
+        <p class="review-paragraph5">
+          “ Before joining the bootcamp, I’ve never written a line of code. I
+          needed some structure from professionals who can help me learn
+          programming step by step. I was encouraged to enroll by a former
+          student of theirs who can only say wonderful things about the program.
+          The entire curriculum and staff did not disappoint. They were very
+          hands-on and I never had to wait long for assistance. The agile team
+          project, in particular, was outstanding. It took my learning to the
+          next level in a way that no tutorial could ever have. In fact, I’ve
+          often referred to it during interviews as an example of my developent
+          experience. It certainly helped me land a job as a full-stack
+          developer after receiving multiple offers. 100% recommend! ”
+        </p>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Moses Anidugbe</a>.
+    </div>
+  </body>
+</html>
